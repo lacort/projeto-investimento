@@ -1,0 +1,21 @@
+sudo apt-get update -y
+
+sudo apt-get install php -y
+
+sudo apt-get install php-mbstring -y
+
+sudo apt-get install php-xml -y
+
+sudo apt-get install php-zip -y
+
+sudo apt-get install mysql-server -y
+
+sudo apt-get install apache2-y
+
+sudo apt-get install phpmyadmin -y
+
+sudo apt-get install curl -y
+
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer -y
+
+sudo chown -R $USER ~/.composer/
