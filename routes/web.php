@@ -11,6 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/',['uses'=>'Controller@homepage']);
+Route::get('/cadastro',['uses'=>'Controller@cadastrar']);
+
+
+
+/*
+====================================
+=    method to use login VIEW      =
+====================================
+*/ 
+Route::get('/login',['uses'=>'Controller@fazerlogin']);
+Route::post('/login',['as'=>'user.login','uses'=>'DashboardController@auth']);
+Route::post('/dashboard',['as'=>'user.dashboard','uses'=>'DashboardController@index']);
+
+
+
+
+

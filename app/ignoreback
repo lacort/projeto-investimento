@@ -1,3 +1,4 @@
+
 //gitignore
 
 /node_modules
@@ -8,9 +9,3 @@
 Homestead.json
 Homestead.yaml
 .env
-
-
-//gitattributes
-* text=auto
-*.css linguist-vendored
-*.scss linguist-vendored

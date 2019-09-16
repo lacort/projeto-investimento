@@ -9,5 +9,30 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class Controller extends BaseController
 {
+    public function homepage()
+    {
+        return view('welcome');
+    }
+
+    public function cadastrar()
+    {
+        echo 'Contruction page register';
+        //return view('welcome');
+    }
+
+
+    /*
+    ====================================
+    =    method to use login VIEW      =
+    ====================================
+    */      
+    public function fazerlogin()
+    {
+        
+        return view('user.login');
+    }
+
+
+
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }

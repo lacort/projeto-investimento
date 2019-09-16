@@ -15,9 +15,10 @@ class CreateUsersTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('users', function(Blueprint $table) {
+		Schema::create('users', function(Blueprint $table) 
+		{
 			$table->increments('id');
-						
+
 			//people data
 			$table->char('cpf',11)->unique()->nullable();
 			$table->string('name',50);
@@ -29,15 +30,14 @@ class CreateUsersTable extends Migration
 			//auth data
 			$table->string('e-mail',80)->unique();
 			$table->string('password',254)->nullable();
-			//Permission
 
+			//Permission
 			$table->string('status')->default('active');
 			$table->string('permission')->default('app.user');
-			$table->remenberToken();
-			$table->timestamp();
-			$table->softDeletes();
 
-            
+			$table->rememberToken();
+			$table->timestamps();
+			$table->softDeletes();           
 		});
 	}
 
@@ -50,7 +50,7 @@ class CreateUsersTable extends Migration
 	{
 		Schema::table('users', function(Blueprint $table)
 		{
-			
+
 		});
 		Schema::drop('users');
 	}
