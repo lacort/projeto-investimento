@@ -13,8 +13,12 @@ class User extends Authenticatable
     use notifiable;
 
     public        $timestamp  = true  ;
-    protected     $table      = 'uses';
-    protected     $fillable   = ['cpf','name','phone','birt','gender','notes','email','password','status','permission'];
+    protected     $table      = 'users';
+    protected     $fillable   = ['cpf','name','phone','birth','gender','notes','email','password','status','permission'];
     protected     $hidden     = ['password','remember_token'];
 
+    public function getPasswordAttribute($value)
+    {
+        $this->attributes['password'] =env('PASSWORD_HASH') ? bcrypt($value) : $value;
+    }
 }

@@ -21,14 +21,14 @@ class CreateUsersTable extends Migration
 
 			//people data
 			$table->char('cpf',11)->unique()->nullable();
-			$table->string('name',50);
-			$table->char('phone',11);
+			$table->string('name',100);
+			$table->char('phone',15);
 			$table->date('birth')->nullable();
 			$table->char('gender',1)->nullable();
 			$table->text('notes')->nullable();
 
 			//auth data
-			$table->string('e-mail',80)->unique();
+			$table->string('email',80)->unique();
 			$table->string('password',254)->nullable();
 
 			//Permission
