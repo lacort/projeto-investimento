@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="{{asset('/css/stylesheet.css')}}">
+
+
 <nav id ="principal">
     <ul>
         <li>
