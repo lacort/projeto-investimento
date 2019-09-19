@@ -8,6 +8,7 @@
     <title>Investindoo</title>
     @yield('ccs-view')
 <link rel="stylesheet" href="{{ asset('css/styleseet.css') }}">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
 </head>
 <body>
     @include('templates.menu-lateral')

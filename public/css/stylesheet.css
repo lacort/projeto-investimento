@@ -138,6 +138,9 @@ section#conteudo-view form input[type="submit"]
     width:80px;
     height:80px;
     color: inherit;
+    text-align: center;
+    line-height: 80px;
+    font-size: 2em;
 }
 #principal ul li a h3
 {
